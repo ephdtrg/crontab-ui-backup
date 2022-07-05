@@ -1,5 +1,5 @@
 # docker run -d -p 8000:8000 alseambusher/crontab-ui
-FROM rclone/rclone:latest
+FROM alpine:3.15.3
 
 ENV   CRON_PATH /etc/crontabs
 
@@ -16,6 +16,7 @@ RUN   apk --no-cache add \
       nodejs \
       npm \
       supervisor \
+      rclone \
       tzdata
 
 COPY supervisord.conf /etc/supervisord.conf
