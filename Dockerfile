@@ -24,7 +24,7 @@ COPY . /crontab-ui
 RUN   npm install
 
 RUN pip install --upgrade pip==20.2.4
-RUN pip install supervisor requests
+RUN pip install supervisor requests dnspython
 
 ENV   HOST 0.0.0.0
 
