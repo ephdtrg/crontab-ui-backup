@@ -15,7 +15,6 @@ RUN   apk --no-cache add \
       curl \
       nodejs \
       npm \
-      supervisor \
       rclone \
       tzdata
 
@@ -23,6 +22,9 @@ COPY supervisord.conf /etc/supervisord.conf
 COPY . /crontab-ui
 
 RUN   npm install
+
+RUN pip install --upgrade pip==20.2.4
+RUN pip install supervisor
 
 ENV   HOST 0.0.0.0
 
