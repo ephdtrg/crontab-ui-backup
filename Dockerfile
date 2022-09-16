@@ -1,5 +1,5 @@
 # docker run -d -p 8000:8000 alseambusher/crontab-ui
-FROM alpine:3.15.3
+FROM python:3.9-alpine3.15
 
 ENV   CRON_PATH /etc/crontabs
 
