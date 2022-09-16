@@ -24,7 +24,7 @@ COPY . /crontab-ui
 RUN   npm install
 
 RUN pip install --upgrade pip==20.2.4
-RUN pip install supervisor
+RUN pip install supervisor requests
 
 ENV   HOST 0.0.0.0
 
