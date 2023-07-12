@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - master
-      - rclone
+      - autorestic
   pull_request:
     branches:
       - master
-      - rclone
+      - autorestic
       
 env:
   REGISTRY: ghcr.io
