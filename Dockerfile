@@ -15,7 +15,6 @@ RUN   apk --no-cache add \
       curl \
       nodejs \
       npm \
-      rclone \
       tzdata
 
 COPY supervisord.conf /etc/supervisord.conf
@@ -25,6 +24,8 @@ RUN   npm install
 
 RUN pip install --upgrade pip==20.2.4
 RUN pip install supervisor requests dnspython
+
+RUN wget -qO - https://raw.githubusercontent.com/cupcakearmy/autorestic/master/install.sh | bash
 
 ENV   HOST 0.0.0.0
 
