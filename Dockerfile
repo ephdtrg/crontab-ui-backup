@@ -26,6 +26,7 @@ RUN pip install --upgrade pip==20.2.4
 RUN pip install supervisor requests dnspython
 
 RUN wget -qO - https://raw.githubusercontent.com/cupcakearmy/autorestic/master/install.sh | /bin/sh
+RUN autorestic install
 
 ENV   HOST 0.0.0.0
 
